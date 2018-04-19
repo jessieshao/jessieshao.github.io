@@ -79,15 +79,19 @@
 
 
 
+<meta name="description" content="git init 在我们新建一个空仓库后需要初始化这个仓库1.首先新建一个项目目录demo2.命令行进入demo下3.git init在demo中创建一个.git目录，她就是一个仓库      git add 此时在demo下创建一个文件后，只是创建成功，并没有保存1.touch 1.txt创建一个txt文件2.git status -sb查看状态，发现新建文件前为？3.此时用git add 1">
 <meta property="og:type" content="article">
 <meta property="og:title" content="git入门">
 <meta property="og:url" content="http://yoursite.com/2018/04/19/git入门/index.html">
 <meta property="og:site_name" content="myBlog">
+<meta property="og:description" content="git init 在我们新建一个空仓库后需要初始化这个仓库1.首先新建一个项目目录demo2.命令行进入demo下3.git init在demo中创建一个.git目录，她就是一个仓库      git add 此时在demo下创建一个文件后，只是创建成功，并没有保存1.touch 1.txt创建一个txt文件2.git status -sb查看状态，发现新建文件前为？3.此时用git add 1">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://yoursite.com/2018/04/19/git入门/1.png">
-<meta property="og:updated_time" content="2018-04-19T07:03:23.000Z">
+<meta property="og:image" content="http://yoursite.com/2018/04/19/git入门/2.png">
+<meta property="og:updated_time" content="2018-04-19T08:33:37.540Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git入门">
+<meta name="twitter:description" content="git init 在我们新建一个空仓库后需要初始化这个仓库1.首先新建一个项目目录demo2.命令行进入demo下3.git init在demo中创建一个.git目录，她就是一个仓库      git add 此时在demo下创建一个文件后，只是创建成功，并没有保存1.touch 1.txt创建一个txt文件2.git status -sb查看状态，发现新建文件前为？3.此时用git add 1">
 <meta name="twitter:image" content="http://yoursite.com/2018/04/19/git入门/1.png">
 
 
@@ -298,7 +302,16 @@
       
 
       
-        <p><img src="/2018/04/19/git入门/1.png" alt=""></p>
+        <h3 id="git-init"><a href="#git-init" class="headerlink" title="git init"></a>git init</h3><ul>
+<li>在我们新建一个空仓库后需要初始化这个仓库<br>1.首先新建一个项目目录demo<br>2.命令行进入demo下<br>3.<code>git init</code>在demo中创建一个.git目录，她就是一个仓库 </li>
+</ul>
+<p><img src="/2018/04/19/git入门/1.png" alt="">  </p>
+<h3 id="git-add"><a href="#git-add" class="headerlink" title="git add"></a>git add</h3><ul>
+<li>此时在demo下创建一个文件后，只是创建成功，并没有保存<br>1.<code>touch 1.txt</code>创建一个txt文件<br>2.<code>git status -sb</code>查看状态，发现新建文件前为？<br>3.此时用<code>git add 1.txt</code>添加进暂缓区<br>4.再次<code>git status -sb</code>发现已存入  <img src="/2018/04/19/git入门/2.png" alt="">  </li>
+</ul>
+<h3 id="git-commit-v"><a href="#git-commit-v" class="headerlink" title="git commit -v"></a>git commit -v</h3><ul>
+<li>使用<code>git commit -m</code>“信息” 将你 add 过的内容「正式提交」到本地仓库，并添加一些注释信息，方便日后查阅<br>1.<code>git commit -v</code> 提交时显示所有diff信息<br>2.完成后才是正式提交上</li>
+</ul>
 
       
     </div>
@@ -383,8 +396,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -426,6 +448,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#git-init"><span class="nav-number">1.</span> <span class="nav-text">git init</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git-add"><span class="nav-number">2.</span> <span class="nav-text">git add</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git-commit-v"><span class="nav-number">3.</span> <span class="nav-text">git commit -v</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

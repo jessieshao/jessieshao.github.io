@@ -300,7 +300,16 @@
       
         
           
-            <p><img src="/2018/04/19/git入门/1.png" alt=""></p>
+            <h3 id="git-init"><a href="#git-init" class="headerlink" title="git init"></a>git init</h3><ul>
+<li>在我们新建一个空仓库后需要初始化这个仓库<br>1.首先新建一个项目目录demo<br>2.命令行进入demo下<br>3.<code>git init</code>在demo中创建一个.git目录，她就是一个仓库 </li>
+</ul>
+<p><img src="/2018/04/19/git入门/1.png" alt="">  </p>
+<h3 id="git-add"><a href="#git-add" class="headerlink" title="git add"></a>git add</h3><ul>
+<li>此时在demo下创建一个文件后，只是创建成功，并没有保存<br>1.<code>touch 1.txt</code>创建一个txt文件<br>2.<code>git status -sb</code>查看状态，发现新建文件前为？<br>3.此时用<code>git add 1.txt</code>添加进暂缓区<br>4.再次<code>git status -sb</code>发现已存入  <img src="/2018/04/19/git入门/2.png" alt="">  </li>
+</ul>
+<h3 id="git-commit-v"><a href="#git-commit-v" class="headerlink" title="git commit -v"></a>git commit -v</h3><ul>
+<li>使用<code>git commit -m</code>“信息” 将你 add 过的内容「正式提交」到本地仓库，并添加一些注释信息，方便日后查阅<br>1.<code>git commit -v</code> 提交时显示所有diff信息<br>2.完成后才是正式提交上</li>
+</ul>
 
           
         
