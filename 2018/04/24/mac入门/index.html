@@ -79,14 +79,17 @@
 
 
 
+<meta name="description" content="mac命令行 打开并编辑一个文件 open xxx.xxx 显示隐藏文件 defaults write com.apple.FinderAppleShowAllFiles YES;KillAll Finder关闭打开隐藏文件   defaults write com.apple.Finder AppleShowAllFiles NO;KillAll  Finder Mac安装了zsh下无法运行~/">
 <meta property="og:type" content="article">
 <meta property="og:title" content="mac入门">
 <meta property="og:url" content="http://yoursite.com/2018/04/24/mac入门/index.html">
 <meta property="og:site_name" content="myBlog">
+<meta property="og:description" content="mac命令行 打开并编辑一个文件 open xxx.xxx 显示隐藏文件 defaults write com.apple.FinderAppleShowAllFiles YES;KillAll Finder关闭打开隐藏文件   defaults write com.apple.Finder AppleShowAllFiles NO;KillAll  Finder Mac安装了zsh下无法运行~/">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-04-24T12:40:39.439Z">
+<meta property="og:updated_time" content="2018-04-24T12:46:16.573Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="mac入门">
+<meta name="twitter:description" content="mac命令行 打开并编辑一个文件 open xxx.xxx 显示隐藏文件 defaults write com.apple.FinderAppleShowAllFiles YES;KillAll Finder关闭打开隐藏文件   defaults write com.apple.Finder AppleShowAllFiles NO;KillAll  Finder Mac安装了zsh下无法运行~/">
 
 
 
@@ -296,7 +299,27 @@
       
 
       
-        
+        <h3 id="mac命令行"><a href="#mac命令行" class="headerlink" title="mac命令行"></a>mac命令行</h3><ul>
+<li>打开并编辑一个文件 <code>open xxx.xxx</code></li>
+<li>显示隐藏文件 <code>defaults write com.apple.FinderAppleShowAllFiles YES;KillAll Finder</code><br>关闭打开隐藏文件   <code>defaults write com.apple.Finder AppleShowAllFiles NO;KillAll  Finder</code></li>
+<li>Mac安装了zsh下无法运行~/.bashrc解决方法：<br> <code>open ~/.zshrc</code><br>  加入<code>source ~/.bashrc</code></li>
+<li>用vscode写<code>github blog：vscode</code>中下载<code>Markdown Preview Enhanced</code>插件编辑md文件，<code>cmd+k v</code>快捷键可以打开，还可以自己配置背景。</li>
+<li><p><code>vscode + hexo</code>写github blog中的坑（转自 简书作者溜逗）<br>博客内无法显示图片（转自 简书作者溜逗）</p>
+<blockquote>
+<p>1.cd到博客根目录下 查看<code>_config.yml</code>文件 查找 <code>post_asset_folder</code> 字段确定<code>post_asset_folder</code>设置为true -&gt; <code>post_asset_folder:true</code> </p>
+</blockquote>
+<blockquote>
+<p>2.设置 <code>post_asset_folder</code> 参数后，在建立文件时，Hexo 会自动建立一个与文章同名的文件夹，您可以把与该文章相关的所有资源都放到此文件夹内，这样就可以更方便的使用资源。 </p>
+</blockquote>
+<blockquote>
+<p>3.到博客的根目录下执行 <code>npm install https://github.com/CodeFalling/hexo-asset-image --save</code>命令来进行插件的安装。   </p>
+</blockquote>
+<blockquote>
+<p>4.然后创建一文章 <code>hexo new &quot;test&quot;</code> 然后查看博客的 <code>../source/_posts</code>目录下的文件，会看到存在一个test 文件夹 和 <code>test.md</code> 文件，将图片放在test 文件夹下</p>
+</blockquote>
+</li>
+</ul>
+
       
     </div>
     
@@ -380,8 +403,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -423,6 +455,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#mac命令行"><span class="nav-number">1.</span> <span class="nav-text">mac命令行</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
