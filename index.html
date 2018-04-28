@@ -248,7 +248,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/04/28/一个简易的server/" itemprop="url">Untitled</a></h1>
+                <a class="post-title-link" href="/2018/04/28/一个简易的server/" itemprop="url">一个简易的server</a></h1>
         
 
         <div class="post-meta">
@@ -300,9 +300,7 @@
       
         
           
-            <hr>
-<p>title: 一个简易的server<br>date: 2018-04-28 14:35:41</p>
-<h2 id="tags"><a href="#tags" class="headerlink" title="tags:"></a>tags:</h2><h3 id="TCP传输控制协议-Transmission-Control-Protocal"><a href="#TCP传输控制协议-Transmission-Control-Protocal" class="headerlink" title="TCP传输控制协议(Transmission Control Protocal)"></a>TCP传输控制协议(Transmission Control Protocal)</h3><p>1.TCP和UDP的区别是什么？<br>TCP可靠、面向连接、相对较慢<br>UDP不可靠、不面向连接、相对较快<br>2.TCP的三次握手是什么？<br>（1）客户端：我要连接你了，可以吗？<br>（2）服务端：嗯，我准备好了，连接我吧<br>（3）客户端：那我连接你咯   </p>
+            <h3 id="TCP传输控制协议-Transmission-Control-Protocal"><a href="#TCP传输控制协议-Transmission-Control-Protocal" class="headerlink" title="TCP传输控制协议(Transmission Control Protocal)"></a>TCP传输控制协议(Transmission Control Protocal)</h3><p>1.TCP和UDP的区别是什么？<br>TCP可靠、面向连接、相对较慢<br>UDP不可靠、不面向连接、相对较快<br>2.TCP的三次握手是什么？<br>（1）客户端：我要连接你了，可以吗？<br>（2）服务端：嗯，我准备好了，连接我吧<br>（3）客户端：那我连接你咯   </p>
 <h3 id="IP网络协议-Internet-Protocol"><a href="#IP网络协议-Internet-Protocol" class="headerlink" title="IP网络协议(Internet Protocol)"></a>IP网络协议(Internet Protocol)</h3><p>localhost 127.0.0.1<br>路由器连接内网和外网<br>内网ip一般为c类地址192.168.x.x  </p>
 <h3 id="端口"><a href="#端口" class="headerlink" title="端口"></a>端口</h3><p>要访问一个设备，除了指定ip还要指定端口(port)<br>端口就是一个编号<br>一个端口对应一个服务<br>一个服务器不一定只提供一个服务：HTTP服务80端口、FTP服务21端口、SMTP服务<br>一共有65535个端口，1023以下是留给系统用的   </p>
 <p>###一个简易server<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">##设置格式</span><br><span class="line">response.setHeader(&apos;Content-Type&apos;,&apos;text/xxx;charest-utf-8&apos;)</span><br><span class="line">##内容</span><br><span class="line">response.write()</span><br><span class="line">##状态码</span><br><span class="line">response.statuscode = 404</span><br><span class="line">##end</span><br><span class="line">response.end()</span><br></pre></td></tr></table></figure></p>
