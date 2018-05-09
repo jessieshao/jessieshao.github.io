@@ -311,7 +311,9 @@
 <li>div（块级元素）：高度是由内部文档流元素高度的总和决定的。</li>
 <li>文档流：文档内元素的流动方向，内联元素是从左往右，块级元素是从上往下</li>
 <li>span（内联元素）：高度是由其中文字高度决定的，内联元素设置width和height是无效的，上下的margin和padding也无效，要将它们设为display:inline-block才有效。 </li>
-<li>最好不要用height和width，会限制文档流的内容，会出bug   <h3 id="position"><a href="#position" class="headerlink" title="position"></a>position</h3><h4 id="position：fixed"><a href="#position：fixed" class="headerlink" title="position：fixed"></a>position：fixed</h4></li>
+<li>最好不要用height和width，会限制文档流的内容，会出bug  </li>
+</ul>
+<h3 id="position"><a href="#position" class="headerlink" title="position"></a>position</h3><h4 id="position：fixed"><a href="#position：fixed" class="headerlink" title="position：fixed"></a>position：fixed</h4><ul>
 <li>可脱离文档流，相对浏览器窗口定位</li>
 <li>有bug后加<code>width：100%</code>子div会比父div大，因为子还要加上padding</li>
 <li>所以要多套一个div </li>
