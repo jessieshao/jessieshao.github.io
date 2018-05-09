@@ -229,6 +229,144 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/07/CSS基础/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="jessieshao">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="myBlog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/05/07/CSS基础/" itemprop="url">CSS基础</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-07T21:03:07+08:00">
+                2018-05-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="CSS历史"><a href="#CSS历史" class="headerlink" title="CSS历史"></a>CSS历史</h3><p>1.两个人合作发明了 CSS<br>1994年哈肯·维姆·莱提出了CSS的最初建议。伯特·波斯（Bert Bos）当时正在设计一个叫做“Argo”的浏览器，他们决定一起合作设计CSS。<br>2.W3C 开始接管 CSS<br>1997年初，W3C内组织了专门管CSS的工作组，其负责人是克里斯·里雷。<br>CSS 2.1<br>3.1998年5月W3C发表了CSS2<br>CSS2.1修改了CSS2中的一些错误，删除了其中基本不被支持的内容和增加了一些已有的浏览器的扩展内容。<br>CSS 3<br>4.从 2011 年开始 CSS 被分为多个模块单独升级，统称为 CSS 3。这些模块有： </p>
+<ul>
+<li>CSS 选择器 level 3</li>
+<li>CSS 媒体查询 level 3</li>
+<li>CSS Color level 3<h3 id="拉横标题（float-clearfix）"><a href="#拉横标题（float-clearfix）" class="headerlink" title="拉横标题（float+clearfix）"></a>拉横标题（float+clearfix）</h3>给所有子元素加上<code>float</code>,给他的爸爸加上<code>clearfix</code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">##在css中加入一个class类</span><br><span class="line">.clearfix::after&#123;</span><br><span class="line">  content: &quot;&quot;;</span><br><span class="line">  display: block;</span><br><span class="line">  clear: both;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="高度和文档流"><a href="#高度和文档流" class="headerlink" title="高度和文档流"></a>高度和文档流</h3><ul>
+<li>div（块级元素）：高度是由内部文档流元素高度的总和决定的。</li>
+<li>文档流：文档内元素的流动方向，内联元素是从左往右，块级元素是从上往下</li>
+<li>span（内联元素）：高度是由其中文字高度决定的，内联元素设置width和height是无效的，上下的margin和padding也无效，要将它们设为display:inline-block才有效。 </li>
+<li>最好不要用height和width，会限制文档流的内容，会出bug   <h3 id="position"><a href="#position" class="headerlink" title="position"></a>position</h3><h4 id="position：fixed"><a href="#position：fixed" class="headerlink" title="position：fixed"></a>position：fixed</h4></li>
+<li>可脱离文档流，相对浏览器窗口定位</li>
+<li>有bug后加<code>width：100%</code>子div会比父div大，因为子还要加上padding</li>
+<li>所以要多套一个div<h3 id="CSS三角形"><a href="#CSS三角形" class="headerlink" title="CSS三角形"></a>CSS三角形</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">.triangle&#123;</span><br><span class="line">  ##border为透明</span><br><span class="line">  border: 30px solid transparent;</span><br><span class="line">  ##实心</span><br><span class="line">  height: 0px;</span><br><span class="line">  width: 0px;</span><br><span class="line">  border-top-width: 0;</span><br><span class="line">  border-left-color: red; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="小知识点"><a href="#小知识点" class="headerlink" title="小知识点"></a>小知识点</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">##背景图按比例缩放</span><br><span class="line">background-size: cover;</span><br><span class="line">##div按比例缩放，不会出滚动条</span><br><span class="line">max-width: xxpx;</span><br><span class="line">##div水平居中</span><br><span class="line">margin-top： auto；</span><br><span class="line">margin-left： auto；</span><br></pre></td></tr></table></figure>
+<p>未完待续</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/02/HTML常用标签/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1456,7 +1594,7 @@ sh ~/local/demo xxx
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
