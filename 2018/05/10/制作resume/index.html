@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="内联元素的高度 文字的居中不是让文字的中线居中对齐，而是让基线对齐。每种字体的浏览器默认建议行高不一样。具体情况是由设计师给的字体font-size大小然后在不同的字体情况下有不同的建议行高。多个span在一起的时候，这一行的高度则由最高的span决定。内联元素的高度基本是不可测的，在font-size比较小的时候可以用line-height来控制内联元素所占的高度，如果想要一个特定的高度，可以再">
+<meta property="og:type" content="article">
+<meta property="og:title" content="制作resume">
+<meta property="og:url" content="http://yoursite.com/2018/05/10/制作resume/index.html">
+<meta property="og:site_name" content="myBlog">
+<meta property="og:description" content="内联元素的高度 文字的居中不是让文字的中线居中对齐，而是让基线对齐。每种字体的浏览器默认建议行高不一样。具体情况是由设计师给的字体font-size大小然后在不同的字体情况下有不同的建议行高。多个span在一起的时候，这一行的高度则由最高的span决定。内联元素的高度基本是不可测的，在font-size比较小的时候可以用line-height来控制内联元素所占的高度，如果想要一个特定的高度，可以再">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-05-10T06:05:16.843Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="制作resume">
+<meta name="twitter:description" content="内联元素的高度 文字的居中不是让文字的中线居中对齐，而是让基线对齐。每种字体的浏览器默认建议行高不一样。具体情况是由设计师给的字体font-size大小然后在不同的字体情况下有不同的建议行高。多个span在一起的时候，这一行的高度则由最高的span决定。内联元素的高度基本是不可测的，在font-size比较小的时候可以用line-height来控制内联元素所占的高度，如果想要一个特定的高度，可以再">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/05/10/制作resume/"/>
+
+
+
+
+
+  <title>制作resume | myBlog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">myBlog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/10/制作resume/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="jessieshao">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="myBlog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">制作resume</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-10T13:36:19+08:00">
+                2018-05-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="内联元素的高度"><a href="#内联元素的高度" class="headerlink" title="内联元素的高度"></a>内联元素的高度</h3><blockquote>
+<p>文字的居中不是让文字的中线居中对齐，而是让基线对齐。<br>每种字体的浏览器默认建议行高不一样。具体情况是由设计师给的字体font-size大小然后在不同的字体情况下有不同的建议行高。<br>多个span在一起的时候，这一行的高度则由最高的span决定。<br>内联元素的高度基本是不可测的，在font-size比较小的时候可以用line-height来控制内联元素所占的高度，如果想要一个特定的高度，可以再在基础上添加padding来增加。</p>
+</blockquote>
+<h3 id="脱离文档流"><a href="#脱离文档流" class="headerlink" title="脱离文档流"></a>脱离文档流</h3><p>一旦脱离文档流，那么父元素的高度则不受该文档控制，父元素会自动忽略他。</p>
+<p>position fixed相对于屏幕<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.topNavBar&#123;</span><br><span class="line">    position: fixed;</span><br><span class="line">    top: 0;</span><br><span class="line">    left: 0;</span><br><span class="line">&#125;</span><br><span class="line">/**相对于屏幕左上角固定**/</span><br></pre></td></tr></table></figure></p>
+<p>如果是fix定位，元素的宽度不会拓展，会往内缩，这时候一般设置width:100%但是给当前div设置100%因为它本身有一个padding宽度，再加上width:100%会超过其父元素，可以通过给要设置的div里面再添加一个div然后给这个新增的div增加padding。</p>
+<h3 id="绝对定位"><a href="#绝对定位" class="headerlink" title="绝对定位"></a>绝对定位</h3><p>在子元素写position:absolute;在父元素写position:relative;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">div&#123;</span><br><span class="line">    position: absolute;</span><br><span class="line">    left: 4px;</span><br><span class="line">    top: 100%; /**离父元素100%的距离，从左往右4px的距离。**/</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="display-inline-block"><a href="#display-inline-block" class="headerlink" title="display:inline block;"></a>display:inline block;</h3><p>外边距margin不会合并<br>加padding<br>span等内联元素不接受宽高，设置也没用，必须设置display:inline-block;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">.userCard .welcome&#123;</span><br><span class="line">  background: #E6686A;</span><br><span class="line">  color: white;</span><br><span class="line">  display: inline-block;</span><br><span class="line">  width: 70px;</span><br><span class="line">  height: 29px;</span><br><span class="line">  line-height: 29px;</span><br><span class="line">  text-align: center;</span><br><span class="line">&#125;</span><br><span class="line">/**最好不要用宽高，在line-height不高的情况下，设置line-height与height高度相等会居中，但是实际line-height会与设定的值不一样，而且会产生bug**/</span><br><span class="line">上面的代码块的效果可以通过下面方法完成，从内像外做,先测原效果宽高为70 30 现有宽高是40 20，宽度现在差30左右给15pxpaading，高度差10上下给5pxpadding。</span><br><span class="line">.userCard .welcome&#123;</span><br><span class="line">    background-color: #E6686A;</span><br><span class="line">    color: white;</span><br><span class="line">    display: inline-block;</span><br><span class="line">    padding: 5px 15px;</span><br><span class="line">      line-height: 20px;</span><br><span class="line">&#125;</span><br><span class="line">/**这种效果比上面还具有一种优势，无论span里面的内容(welcom)增加或减少，居中都不会变。**/</span><br><span class="line">/**需要注意的事最后还要添加line-height:20px;尽管现在在机器上是20px了，但是有些机器可能会变动，添加line-height之后可以明确表明20px+2*5px=30px**/</span><br></pre></td></tr></table></figure></p>
+<h3 id="半透层背景"><a href="#半透层背景" class="headerlink" title="半透层背景"></a>半透层背景</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">background-color: rgba(0,255,0,0.8);</span><br><span class="line">/不要颜色（黑色），半透层背景/</span><br></pre></td></tr></table></figure>
+<h3 id="背景图片"><a href="#背景图片" class="headerlink" title="背景图片"></a>背景图片</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">##居中</span><br><span class="line">background-position: center center;</span><br><span class="line">##按比例缩放</span><br><span class="line">background-size: cover;</span><br></pre></td></tr></table></figure>
+<h3 id="max-width"><a href="#max-width" class="headerlink" title="max-width"></a>max-width</h3><p>不要设定固定的宽度，可以设置最大宽度,如果屏幕比最大宽度小可以自适应<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">:max-width:940px;</span><br><span class="line">div设置水平居中</span><br><span class="line">margin-left:auto;</span><br><span class="line">margin-right:auto;</span><br></pre></td></tr></table></figure></p>
+<h3 id="hr"><a href="#hr" class="headerlink" title="hr"></a>hr</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">hr&#123;</span><br><span class="line">    height: 0;</span><br><span class="line">    border:none;</span><br><span class="line">    border-top: 1px solid #DEDEDE;</span><br><span class="line">&#125;</span><br><span class="line">.userCard .text hr&#123;</span><br><span class="line">    margin: 20px 0px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="dl浮动"><a href="#dl浮动" class="headerlink" title="dl浮动"></a>dl浮动</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">.userCard dl dt,</span><br><span class="line">.userCard dl dd&#123;</span><br><span class="line">    float: left;        </span><br><span class="line">&#125;</span><br><span class="line">.userCard dl dt&#123;</span><br><span class="line">    width: 30%;</span><br><span class="line">&#125;</span><br><span class="line">.userCard dl dd&#123;</span><br><span class="line">    width: 70%;         </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="svg"><a href="#svg" class="headerlink" title="svg"></a>svg</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">svg&#123;</span><br><span class="line">    width: 30px;</span><br><span class="line">    height: 30px;</span><br><span class="line">    fill: white;</span><br><span class="line">    vertical-align: top;  </span><br><span class="line">    /**缩小下边距**/</span><br><span class="line">&#125;</span><br><span class="line">a标签搭配svg</span><br><span class="line">a&#123;</span><br><span class="line">    display: inline-block;</span><br><span class="line">    border-radius: 50%;      </span><br><span class="line">    width: 40px;</span><br><span class="line">    padding: 5px 0;          </span><br><span class="line">    line-height: 30px;</span><br><span class="line">    margin: 16px 16px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/05/07/CSS基础/" rel="next" title="CSS基础">
+                <i class="fa fa-chevron-left"></i> CSS基础
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">jessieshao</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#内联元素的高度"><span class="nav-number">1.</span> <span class="nav-text">内联元素的高度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#脱离文档流"><span class="nav-number">2.</span> <span class="nav-text">脱离文档流</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#绝对定位"><span class="nav-number">3.</span> <span class="nav-text">绝对定位</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#display-inline-block"><span class="nav-number">4.</span> <span class="nav-text">display:inline block;</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#半透层背景"><span class="nav-number">5.</span> <span class="nav-text">半透层背景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#背景图片"><span class="nav-number">6.</span> <span class="nav-text">背景图片</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#max-width"><span class="nav-number">7.</span> <span class="nav-text">max-width</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hr"><span class="nav-number">8.</span> <span class="nav-text">hr</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#dl浮动"><span class="nav-number">9.</span> <span class="nav-text">dl浮动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#svg"><span class="nav-number">10.</span> <span class="nav-text">svg</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">jessieshao</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
