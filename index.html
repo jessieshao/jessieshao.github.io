@@ -229,6 +229,133 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/10/CSS布局/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="jessieshao">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="myBlog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/05/10/CSS布局/" itemprop="url">CSS布局</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-10T22:58:40+08:00">
+                2018-05-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="水平居中"><a href="#水平居中" class="headerlink" title="水平居中"></a>水平居中</h3><h4 id="内联元素水平居中"><a href="#内联元素水平居中" class="headerlink" title="内联元素水平居中"></a>内联元素水平居中</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">##a</span><br><span class="line">&lt;p class=&quot;&quot; style= &quot;text-align:center&quot;&gt;</span><br><span class="line">&lt;a&gt;hello&lt;/a&gt;</span><br><span class="line">&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="块级元素水平居中"><a href="#块级元素水平居中" class="headerlink" title="块级元素水平居中"></a>块级元素水平居中</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">##div p</span><br><span class="line">.&#123;</span><br><span class="line">    margin-left: auto;</span><br><span class="line">    margin-right: auto;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>或者<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.parent&#123;</span><br><span class="line">    text-align: center;</span><br><span class="line">&#125;</span><br><span class="line">.child&#123;</span><br><span class="line">    display: inline-block;</span><br><span class="line">    vertical=align: top</span><br><span class="line">    /..消除多出来的底部一行</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="垂直居中"><a href="#垂直居中" class="headerlink" title="垂直居中"></a>垂直居中</h3><p>1.若父元素没有写height，则直接在父元素写<br><code>padding: 10px 0;</code><br>2.绝对居中<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">##父元素一定要有高度并比子元素大，否则无法包住子元素</span><br><span class="line">父亲加position: relative;</span><br><span class="line">child.&#123;</span><br><span class="line"> position: absolute;</span><br><span class="line"> top: 0;</span><br><span class="line"> left: 0;</span><br><span class="line"> bottom: 0;</span><br><span class="line"> right: 0;</span><br><span class="line"> margin: auto;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>或者<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">display: flex;               //让它变成一个弹性盒</span><br><span class="line">justify-content: center;     //水平居中</span><br><span class="line">align-items: center;         //垂直居中</span><br><span class="line">##不兼容IE</span><br></pre></td></tr></table></figure></p>
+<p>3.图片居中并自适应屏幕<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">background: url(&quot;wallhaven-w-min.jpg&quot;) no-repeat center center ;</span><br><span class="line">background-size: cover;</span><br></pre></td></tr></table></figure></p>
+<h3 id="布局"><a href="#布局" class="headerlink" title="布局"></a>布局</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">给父亲加clearfic类，给儿子们加float：left</span><br><span class="line">.clearfix::after&#123;</span><br><span class="line">  content: &quot;&quot;;</span><br><span class="line">  display: block;</span><br><span class="line">  clear: both;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>或者<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">.parent&#123;</span><br><span class="line">  display:flex;  </span><br><span class="line">  justyfy-content:space-between;</span><br><span class="line">&#125;</span><br><span class="line">/..可使水平均匀布局</span><br></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/10/制作resume/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1428,142 +1555,6 @@ sh ~/local/demo xxx
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/17/命令入门/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="jessieshao">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="myBlog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/04/17/命令入门/" itemprop="url">命令入门</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-17T22:27:48+08:00">
-                2018-04-17
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="下面介绍几种常用的命令"><a href="#下面介绍几种常用的命令" class="headerlink" title="下面介绍几种常用的命令"></a>下面介绍几种常用的命令</h2><h3 id="mv"><a href="#mv" class="headerlink" title="mv"></a>mv</h3><blockquote>
-<p><code>mv [源路径] [目的路径]</code>：移动节点<br>将1.txt改名为2.txt,后缀可改<br><code>mv 1.txt 2.txt </code></p>
-</blockquote>
-<h3 id="touch"><a href="#touch" class="headerlink" title="touch"></a>touch</h3><blockquote>
-<p>touch ：创建文件<br>创建一个1.txt的文件<br><code>touch 1.txt</code></p>
-</blockquote>
-<h3 id="ls"><a href="#ls" class="headerlink" title="ls"></a>ls</h3><blockquote>
-<p><code>ls[选项] [目录或文件名]</code> ：查看路径<br><code>ls -a</code> :显示不隐藏的文件与文件夹<br><code>ls -l</code> :显示不隐藏的文件与文件夹的详细信息<br><code>ls -al</code>: 显示所有文件与文件夹的详细信息  </p>
-</blockquote>
-<p><img src="/2018/04/17/命令入门/1.png" alt=""></p>
-<h3 id="cat"><a href="#cat" class="headerlink" title="cat"></a>cat</h3><blockquote>
-<p><code>cat [选项] [文件]</code>：连接文件或标准输入并打印<br><code>cat 文件名</code>：查看文件内容<br><code>cat xx.txt | grep yy</code>：查找文件内容<br><code>cat &gt;b.txt &lt;&lt; abc</code> ：编辑b.txt并以abc结束  </p>
-</blockquote>
-<p><img src="/2018/04/17/命令入门/2.png" alt=""></p>
-<h2 id="如何使用-explainshell-这个网站"><a href="#如何使用-explainshell-这个网站" class="headerlink" title="如何使用 explainshell 这个网站"></a>如何使用 explainshell 这个网站</h2><blockquote>
-<p>首先google翻墙<br>直接打开 <code>explainshell.com</code><br>搜索框中输入你想要查询的命令<br>网页中会显示命令的解释和用法</p>
-</blockquote>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1614,7 +1605,7 @@ sh ~/local/demo xxx
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-count">12</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
