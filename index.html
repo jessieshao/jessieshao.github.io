@@ -321,10 +321,12 @@
 </blockquote>
 <h3 id="typeof"><a href="#typeof" class="headerlink" title="typeof"></a>typeof</h3><p><img src="/2018/06/06/JS里的数据类型/1.png" alt=""></p>
 <h3 id="小知识"><a href="#小知识" class="headerlink" title="小知识"></a>小知识</h3><ul>
-<li><p>想知道变量 a 是否已经声明过（值为 undefined 不代表没有声明过），应该用<figure class="highlight plain"><figcaption><span>('a' in window) &#123; ... &#125;```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">* obj[]</span><br></pre></td></tr></table></figure></p>
-<p>  var name = ‘x’<br>  var obj = {</p>
-<pre><code>name: &apos;frank&apos;
-</code></pre><p>  }<br>  //则obj[name]<br>  //undefined<br>  <code>`</code><br>  name是一个变量，指向x</p>
+<li><p>想知道变量 a 是否已经声明过（值为 undefined 不代表没有声明过），应该用</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">if (&apos;a&apos; in window) &#123; ... &#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>obj[]</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var name = &apos;x&apos;</span><br><span class="line">var obj = &#123;</span><br><span class="line">    name: &apos;frank&apos;</span><br><span class="line">&#125;</span><br><span class="line">//则obj[name]</span><br><span class="line">//undefined</span><br></pre></td></tr></table></figure>
+<p>  name是一个变量，指向x</p>
 </li>
 </ul>
 <ul>
