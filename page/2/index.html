@@ -229,6 +229,131 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/19/脚本入门/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="jessieshao">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="myBlog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/04/19/脚本入门/" itemprop="url">脚本入门</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-19T19:39:33+08:00">
+                2018-04-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="写一个脚本"><a href="#写一个脚本" class="headerlink" title="写一个脚本"></a>写一个脚本</h3><blockquote>
+<p>脚本就是计算机按照执行的命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">#创建一个存放脚本的地方  </span><br><span class="line">mkdir ~/local</span><br><span class="line">cd ~/local</span><br><span class="line">touch demo </span><br><span class="line"></span><br><span class="line">#编写脚本内容（加入参数 $1为第一个参数）</span><br><span class="line">mkdir $1</span><br><span class="line">cd $1</span><br><span class="line">mkdir css js</span><br><span class="line">touch index.html css/style.css js/main.js</span><br><span class="line">exit    </span><br><span class="line"></span><br><span class="line">#将demo加入环境 </span><br><span class="line">open ~/.zshrc</span><br><span class="line">加入export PATH=&quot;local的绝对路径:$PATH&quot;</span><br><span class="line">source ~/.zshrc</span><br><span class="line"></span><br><span class="line">或者touch ~/.bashrc</span><br><span class="line">export PATH=&quot;local的绝对路径:$PATH&quot;</span><br><span class="line">source ~/.bashrc</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h3 id="参数脚本的使用"><a href="#参数脚本的使用" class="headerlink" title="参数脚本的使用"></a>参数脚本的使用</h3><pre><code>#在任意路径下
+sh ~/local/demo xxx     
+</code></pre><h3 id="js重写sh脚本"><a href="#js重写sh脚本" class="headerlink" title="js重写sh脚本"></a>js重写sh脚本</h3><p>见仓库</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/19/git入门/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -650,7 +775,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-count">14</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
