@@ -79,19 +79,17 @@
 
 
 
-<meta name="description" content="概述JS有7种数据类型：number string boolean symbol undefined null object number 整数和小数：1 1.1 .1科学记数法：1.23e2二进制：0b11八进制：011（后来 ES5 添加了 0o11 语法）十六进制：0x11  string 空字符串：’’多行字符串：12345var s = &amp;apos;12345&amp;apos; +">
+<meta name="description" content="任意类型转字符串1.String(x)2.x.toString123456/*null\undefined\object不可以用此方法转换*/null&amp;amp;undefined//Uncaught TypeError: Cannot read property &amp;apos;toString&amp;apos; of ...&amp;#123;&amp;#125;.toString()//VM5190:1 Uncaugh">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JS里的数据类型">
-<meta property="og:url" content="http://yoursite.com/2018/06/06/JS里的数据类型/index.html">
+<meta property="og:title" content="普通类型和对象的区别">
+<meta property="og:url" content="http://yoursite.com/2018/06/06/普通类型和对象的区别/index.html">
 <meta property="og:site_name" content="myBlog">
-<meta property="og:description" content="概述JS有7种数据类型：number string boolean symbol undefined null object number 整数和小数：1 1.1 .1科学记数法：1.23e2二进制：0b11八进制：011（后来 ES5 添加了 0o11 语法）十六进制：0x11  string 空字符串：’’多行字符串：12345var s = &amp;apos;12345&amp;apos; +">
+<meta property="og:description" content="任意类型转字符串1.String(x)2.x.toString123456/*null\undefined\object不可以用此方法转换*/null&amp;amp;undefined//Uncaught TypeError: Cannot read property &amp;apos;toString&amp;apos; of ...&amp;#123;&amp;#125;.toString()//VM5190:1 Uncaugh">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="http://yoursite.com/2018/06/06/JS里的数据类型/1.png">
-<meta property="og:updated_time" content="2018-06-06T12:32:33.481Z">
+<meta property="og:updated_time" content="2018-06-07T01:00:23.714Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JS里的数据类型">
-<meta name="twitter:description" content="概述JS有7种数据类型：number string boolean symbol undefined null object number 整数和小数：1 1.1 .1科学记数法：1.23e2二进制：0b11八进制：011（后来 ES5 添加了 0o11 语法）十六进制：0x11  string 空字符串：’’多行字符串：12345var s = &amp;apos;12345&amp;apos; +">
-<meta name="twitter:image" content="http://yoursite.com/2018/06/06/JS里的数据类型/1.png">
+<meta name="twitter:title" content="普通类型和对象的区别">
+<meta name="twitter:description" content="任意类型转字符串1.String(x)2.x.toString123456/*null\undefined\object不可以用此方法转换*/null&amp;amp;undefined//Uncaught TypeError: Cannot read property &amp;apos;toString&amp;apos; of ...&amp;#123;&amp;#125;.toString()//VM5190:1 Uncaugh">
 
 
 
@@ -121,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/06/06/JS里的数据类型/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/06/06/普通类型和对象的区别/"/>
 
 
 
 
 
-  <title>JS里的数据类型 | myBlog</title>
+  <title>普通类型和对象的区别 | myBlog</title>
   
 
 
@@ -234,7 +232,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/06/JS里的数据类型/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/06/普通类型和对象的区别/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="jessieshao">
@@ -251,7 +249,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">JS里的数据类型</h1>
+          <h1 class="post-title" itemprop="name headline">普通类型和对象的区别</h1>
         
 
         <div class="post-meta">
@@ -263,7 +261,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-06-06T19:45:03+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-06-06T22:30:02+08:00">
                 2018-06-06
               </time>
             
@@ -301,38 +299,16 @@
       
 
       
-        <h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>JS有7种数据类型：number string boolean symbol undefined null object</p>
-<h3 id="number"><a href="#number" class="headerlink" title="number"></a>number</h3><blockquote>
-<p>整数和小数：1 1.1 .1<br>科学记数法：1.23e2<br>二进制：0b11<br>八进制：011（后来 ES5 添加了 0o11 语法）<br>十六进制：0x11</p>
-</blockquote>
-<h3 id="string"><a href="#string" class="headerlink" title="string"></a>string</h3><blockquote>
-<p>空字符串：’’<br>多行字符串：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var s = &apos;12345&apos; +</span><br><span class="line">              &apos;67890&apos; // 无回车符号</span><br><span class="line">  或</span><br><span class="line">  var s = `12345</span><br><span class="line">  67890` // 含回车符号</span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<h3 id="boolean"><a href="#boolean" class="headerlink" title="boolean"></a>boolean</h3><blockquote>
-<p>true<br>false</p>
-</blockquote>
-<h3 id="symbol"><a href="#symbol" class="headerlink" title="symbol"></a>symbol</h3><blockquote>
-<p>Symbol 是EC6规格所支持的一种新的数据类型<br>Symbol 生成一个全局唯一的值<br>Symbol 可以创建一个独一无二的值（但并不是字符串）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var race = &#123;</span><br><span class="line">  protoss: Symbol(),</span><br><span class="line">  terran: Symbol(),</span><br><span class="line">  zerg: Symbol()</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">race.protoss !== race.terran // true</span><br><span class="line">race.protoss !== race.zerg // true</span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<h3 id="undefined-和-null"><a href="#undefined-和-null" class="headerlink" title="undefined 和 null"></a>undefined 和 null</h3><blockquote>
-<p>变量没有被赋值–undefined<br>有一个对象，不想赋值，则初始化成–null<br>有一个非对象，不想赋值则初始化成–undefined</p>
-</blockquote>
-<h3 id="object"><a href="#object" class="headerlink" title="object"></a>object</h3><blockquote>
-<p>object 的 key 一律是字符串，不存在其他类型的 key<br>object[‘’] 是合法的<br>object[‘key’] 可以写作 object.key<br>注意 object.key 与 object[key] 不同<br>delete object[‘key’]<br>‘key’ in object<br>object 里面可以有 object</p>
-</blockquote>
-<h3 id="typeof"><a href="#typeof" class="headerlink" title="typeof"></a>typeof</h3><p><img src="/2018/06/06/JS里的数据类型/1.png" alt=""></p>
-<h3 id="小知识"><a href="#小知识" class="headerlink" title="小知识"></a>小知识</h3><ul>
-<li><p>想知道变量 a 是否已经声明过（值为 undefined 不代表没有声明过），应该用</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">if (&apos;a&apos; in window) &#123; ... &#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>obj[]</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var name = &apos;x&apos;</span><br><span class="line">var obj = &#123;</span><br><span class="line">    name: &apos;frank&apos;</span><br><span class="line">&#125;</span><br><span class="line">//则obj[name]</span><br><span class="line">//undefined</span><br></pre></td></tr></table></figure>
-<p>  name是一个变量，指向x</p>
-</li>
-</ul>
-<ul>
-<li>Base 64<br>全局函数 btoa() 能将字符串转为Base64编码<br>全局函数 atob() 能将 Base64编码转为原来的编码<br>要将非ASCII码字符转为Base64编码，必须中间插入一个转码环节<br>Base64是一种基于64个可打印字符来表示二进制数据的表示方法。</li>
-</ul>
+        <h3 id="任意类型转字符串"><a href="#任意类型转字符串" class="headerlink" title="任意类型转字符串"></a>任意类型转字符串</h3><p>1.String(x)<br>2.x.toString<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">/*null\undefined\object不可以用此方法转换*/</span><br><span class="line"></span><br><span class="line">null&amp;undefined</span><br><span class="line">//Uncaught TypeError: Cannot read property &apos;toString&apos; of ...</span><br><span class="line">&#123;&#125;.toString()</span><br><span class="line">//VM5190:1 Uncaught SyntaxError: Unexpected token .</span><br></pre></td></tr></table></figure></p>
+<p>3.x + ‘’<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">实际中常用方法</span><br><span class="line">任何类型 + 字符串 = 字符串</span><br></pre></td></tr></table></figure></p>
+<p>###任意类型转数字<br>1.Number(x)<br>2.parseInt(x, 10)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">10为十进制，整型</span><br></pre></td></tr></table></figure></p>
+<p>3.parseFloat(x)<br>4.x - 0<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">日常用</span><br></pre></td></tr></table></figure></p>
+<p>5.+x</p>
+<p>###任意类型转布尔<br>1.Boolean(x)<br>2.!!x<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">只记住5个falsy值</span><br><span class="line">0  NAN  &apos;&apos;  null  undefined</span><br></pre></td></tr></table></figure></p>
+<p>###对象&amp;内存图<br>JS 引擎将内存分为代码区和数据区<br>数据区分为 Stack（栈内存） 和 Heap（堆内存）<br>简单类型的数据直接存在 Stack 里<br>复杂类型的数据是把 Heap 地址存在 Stack 里</p>
+<p>一定要画图</p>
+<p>###深拷贝与浅拷贝<br>对于简单类型的数据来说，赋值就是深拷贝。<br>对于复杂类型的数据（对象）来说，才要区分浅拷贝和深拷贝。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">var a = 1</span><br><span class="line">var b = a</span><br><span class="line">b = 2 </span><br><span class="line">//这个时候改变 b,a 完全不受 b 的影响,这是一个深复制</span><br><span class="line"></span><br><span class="line">var a = &#123;name: &apos;frank&apos;&#125;</span><br><span class="line">var b = a</span><br><span class="line">b.name = &apos;b&apos;</span><br><span class="line">a.name === &apos;b&apos; // true</span><br><span class="line">//这是一个浅拷贝，因为a也变了</span><br><span class="line"></span><br><span class="line">深拷贝就是对 Heap 内存进行完全的拷贝。</span><br></pre></td></tr></table></figure></p>
+<p>###对象题目<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">var a = 1</span><br><span class="line">var b = a</span><br><span class="line">b = 2</span><br><span class="line">请问 a 显示是几？ </span><br><span class="line">//1</span><br><span class="line"></span><br><span class="line">var a = &#123;name: &apos;a&apos;&#125;</span><br><span class="line">var b = a</span><br><span class="line">b = &#123;name: &apos;b&apos;&#125;</span><br><span class="line">请问现在 a.name 是多少？</span><br><span class="line">//a</span><br><span class="line"></span><br><span class="line">var a = &#123;name: &apos;a&apos;&#125;</span><br><span class="line">var b = a</span><br><span class="line">b.name = &apos;b&apos;</span><br><span class="line">请问现在 a.name 是多少？</span><br><span class="line">//b</span><br><span class="line"></span><br><span class="line">var a = &#123;name: &apos;a&apos;&#125;</span><br><span class="line">var b = a</span><br><span class="line">b = null</span><br><span class="line">请问现在 a 是什么？</span><br><span class="line">//a</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -357,8 +333,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/05/14/算法初级/" rel="next" title="算法初级">
-                <i class="fa fa-chevron-left"></i> 算法初级
+              <a href="/2018/06/06/JS里的数据类型/" rel="next" title="JS里的数据类型">
+                <i class="fa fa-chevron-left"></i> JS里的数据类型
               </a>
             
           </div>
@@ -366,10 +342,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/06/06/普通类型和对象的区别/" rel="prev" title="普通类型和对象的区别">
-                普通类型和对象的区别 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -483,7 +455,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#概述"><span class="nav-number">1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#number"><span class="nav-number">2.</span> <span class="nav-text">number</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#string"><span class="nav-number">3.</span> <span class="nav-text">string</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#boolean"><span class="nav-number">4.</span> <span class="nav-text">boolean</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#symbol"><span class="nav-number">5.</span> <span class="nav-text">symbol</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined-和-null"><span class="nav-number">6.</span> <span class="nav-text">undefined 和 null</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#object"><span class="nav-number">7.</span> <span class="nav-text">object</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#typeof"><span class="nav-number">8.</span> <span class="nav-text">typeof</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#小知识"><span class="nav-number">9.</span> <span class="nav-text">小知识</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#任意类型转字符串"><span class="nav-number">1.</span> <span class="nav-text">任意类型转字符串</span></a></li></ol></div>
             
 
           </div>
