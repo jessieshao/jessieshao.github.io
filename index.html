@@ -229,6 +229,132 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/07/原型与原型链/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="jessieshao">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="myBlog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/06/07/原型与原型链/" itemprop="url">原型与原型链</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-06-07T10:51:27+08:00">
+                2018-06-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="全局变量"><a href="#全局变量" class="headerlink" title="全局变量"></a>全局变量</h3><h4 id="global"><a href="#global" class="headerlink" title="global"></a>global</h4><p>//ECMAScript 规定<br>global.parseInt<br>global.parseFloat<br>global.Number<br>global.String<br>global.Boolean<br>global.Object</p>
+<h4 id="window"><a href="#window" class="headerlink" title="window"></a>window</h4><p>//浏览器<br>window.alert<br>window.prompt<br>window.comfirm<br>window.console.log</p>
+<h3 id="全局函数"><a href="#全局函数" class="headerlink" title="全局函数"></a>全局函数</h3><h4 id="Number"><a href="#Number" class="headerlink" title="Number"></a>Number</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">var n = new Number(1);</span><br><span class="line">//这样n是一个对象，有自己的属性，但太麻烦</span><br><span class="line">var n =1;</span><br><span class="line">//n是基本类型</span><br><span class="line">如何使用toString()？</span><br><span class="line">n.toString(); </span><br><span class="line">//等价于</span><br><span class="line">var temp = new Number(n);    //声明了一个临时变量temp，并将n作为Number对象赋给它</span><br><span class="line">temp.toString();             //用temp来执行toString，执行完后temp就被删除了</span><br><span class="line"></span><br><span class="line">n.xxx = 2;      //可以的</span><br><span class="line">n.xxx           //undefined，因为xxx是存在temp的，上一句的temp执行完后就被删除，所以xxx也被删除了</span><br></pre></td></tr></table></figure>
+<h4 id="String"><a href="#String" class="headerlink" title="String"></a>String</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">var s = &apos;asd&apos;;      </span><br><span class="line">var s2 = new String(s);</span><br><span class="line">s2[0]    //&apos;a&apos;</span><br><span class="line">因为String()对象有hash的属性</span><br><span class="line"></span><br><span class="line">s[0]     //&apos;a&apos;</span><br><span class="line">s也能调用这个属性，但s实质没有属性，这个原理和上面Number一样</span><br><span class="line"></span><br><span class="line">s.charCodeAt(0)    //97，a的unicode码</span><br><span class="line">s.charCodeAt(0).toString(16)//&apos;61&apos;，a的unicode码的十六进制</span><br><span class="line"></span><br><span class="line">&apos; asd &apos;.trim();      //&apos;asd&apos;，去掉字符串两边的空格</span><br><span class="line"></span><br><span class="line">var s1 = &apos;Hello&apos;;</span><br><span class="line">s.concat(s1);      //asdHello，连接两个字符串</span><br><span class="line"></span><br><span class="line">s1.slice(0,1);      // &apos;H&apos;</span><br><span class="line">s1.slice(1);        //&apos;ello&apos;，返回1和后面的所有内容</span><br><span class="line"></span><br><span class="line">s1.replace(&apos;e&apos;,&apos;o&apos;)    // &apos;Hollo&apos;，替换</span><br><span class="line"></span><br><span class="line">s1.indexOf(&apos;o&apos;)       //4，定位，若没找到会返回-1</span><br><span class="line">if(s1.indexOf(&apos;h&apos;) !== -1) &#123;&#125;</span><br><span class="line"></span><br><span class="line">s1.toLowerCase();      //    全变成小写</span><br><span class="line">s1.toUpperCase();      //    全变成大写</span><br></pre></td></tr></table></figure>
+<h4 id="Boolean"><a href="#Boolean" class="headerlink" title="Boolean"></a>Boolean</h4><p>所有对象都是true<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var b = false;</span><br><span class="line">var b1 = new Boolean(false);</span><br><span class="line">if(b)&#123;console.log(&apos;true&apos;)&#125;;</span><br><span class="line">if(b1)&#123;console.log(&apos;true&apos;)&#125;;      // true</span><br><span class="line">//只会输出b1，因为所有对象都是true！！</span><br></pre></td></tr></table></figure></p>
+<h4 id="Object"><a href="#Object" class="headerlink" title="Object"></a>Object</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var o1 = &#123;&#125;</span><br><span class="line">var o2 = new Object()</span><br><span class="line">o1 和 o2 没区别</span><br><span class="line">o1 === o2  //false，因为比较的是地址，而地址不同</span><br></pre></td></tr></table></figure>
+<h3 id="公用属性-原型"><a href="#公用属性-原型" class="headerlink" title="公用属性(原型)"></a>公用属性(原型)</h3><p>所有对象都有 toString 和 valueOf 属性，那么我们是否有必要给每个对象一个 toString 和 valueOf 呢？<br>明显不需要。<br>JS 的做法是把 toString 和 valueOf 放在一个对象里（暂且叫做公用属性组成的对象）<br>然后让每一个对象的 <strong>proto</strong> 存储这个「公用属性组成的对象」的地址。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/06/普通类型和对象的区别/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1436,145 +1562,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/24/mac入门/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="jessieshao">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="myBlog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/04/24/mac入门/" itemprop="url">mac入门</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-24T20:40:39+08:00">
-                2018-04-24
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="mac命令行"><a href="#mac命令行" class="headerlink" title="mac命令行"></a>mac命令行</h3><ul>
-<li>打开并编辑一个文件 <code>open xxx.xxx</code></li>
-<li>显示隐藏文件 <code>defaults write com.apple.FinderAppleShowAllFiles YES;KillAll Finder</code><br>关闭打开隐藏文件   <code>defaults write com.apple.Finder AppleShowAllFiles NO;KillAll  Finder</code></li>
-<li>Mac安装了zsh下无法运行~/.bashrc解决方法：<br> <code>open ~/.zshrc</code><br>  加入<code>source ~/.bashrc</code></li>
-<li>用vscode写<code>github blog：vscode</code>中下载<code>Markdown Preview Enhanced</code>插件编辑md文件，<code>cmd+k v</code>快捷键可以打开，还可以自己配置背景。</li>
-<li><p><code>vscode + hexo</code>写github blog中的坑（转自 简书作者溜逗）<br>博客内无法显示图片（转自 简书作者溜逗）</p>
-<blockquote>
-<p>1.cd到博客根目录下 查看<code>_config.yml</code>文件 查找 <code>post_asset_folder</code> 字段确定<code>post_asset_folder</code>设置为true -&gt; <code>post_asset_folder:true</code> </p>
-</blockquote>
-<blockquote>
-<p>2.设置 <code>post_asset_folder</code> 参数后，在建立文件时，Hexo 会自动建立一个与文章同名的文件夹，您可以把与该文章相关的所有资源都放到此文件夹内，这样就可以更方便的使用资源。 </p>
-</blockquote>
-<blockquote>
-<p>3.到博客的根目录下执行 <code>npm install https://github.com/CodeFalling/hexo-asset-image --save</code>命令来进行插件的安装。   </p>
-</blockquote>
-<blockquote>
-<p>4.然后创建一文章 <code>hexo new &quot;test&quot;</code> 然后查看博客的 <code>../source/_posts</code>目录下的文件，会看到存在一个test 文件夹 和 <code>test.md</code> 文件，将图片放在test 文件夹下</p>
-</blockquote>
-</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1625,7 +1612,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-count">16</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>

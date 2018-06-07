@@ -79,20 +79,17 @@
 
 
 
-<meta name="description" content="git init 在我们新建一个空仓库后需要初始化这个仓库1.首先新建一个项目目录demo2.命令行进入demo下3.git init在demo中创建一个.git目录，她就是一个仓库      git add 此时在demo下创建一个文件后，只是创建成功，并没有保存1.touch 1.txt创建一个txt文件2.git status -sb查看状态，发现新建文件前为？3.此时用git add 1">
+<meta name="description" content="全局变量global//ECMAScript 规定global.parseIntglobal.parseFloatglobal.Numberglobal.Stringglobal.Booleanglobal.Object window//浏览器window.alertwindow.promptwindow.comfirmwindow.console.log 全局函数Number1234567891">
 <meta property="og:type" content="article">
-<meta property="og:title" content="git入门">
-<meta property="og:url" content="http://yoursite.com/2018/04/19/git入门/index.html">
+<meta property="og:title" content="原型与原型链">
+<meta property="og:url" content="http://yoursite.com/2018/06/07/原型与原型链/index.html">
 <meta property="og:site_name" content="myBlog">
-<meta property="og:description" content="git init 在我们新建一个空仓库后需要初始化这个仓库1.首先新建一个项目目录demo2.命令行进入demo下3.git init在demo中创建一个.git目录，她就是一个仓库      git add 此时在demo下创建一个文件后，只是创建成功，并没有保存1.touch 1.txt创建一个txt文件2.git status -sb查看状态，发现新建文件前为？3.此时用git add 1">
+<meta property="og:description" content="全局变量global//ECMAScript 规定global.parseIntglobal.parseFloatglobal.Numberglobal.Stringglobal.Booleanglobal.Object window//浏览器window.alertwindow.promptwindow.comfirmwindow.console.log 全局函数Number1234567891">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="http://yoursite.com/2018/04/19/git入门/1.png">
-<meta property="og:image" content="http://yoursite.com/2018/04/19/git入门/2.png">
-<meta property="og:updated_time" content="2018-04-19T08:33:37.540Z">
+<meta property="og:updated_time" content="2018-06-07T09:16:29.519Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="git入门">
-<meta name="twitter:description" content="git init 在我们新建一个空仓库后需要初始化这个仓库1.首先新建一个项目目录demo2.命令行进入demo下3.git init在demo中创建一个.git目录，她就是一个仓库      git add 此时在demo下创建一个文件后，只是创建成功，并没有保存1.touch 1.txt创建一个txt文件2.git status -sb查看状态，发现新建文件前为？3.此时用git add 1">
-<meta name="twitter:image" content="http://yoursite.com/2018/04/19/git入门/1.png">
+<meta name="twitter:title" content="原型与原型链">
+<meta name="twitter:description" content="全局变量global//ECMAScript 规定global.parseIntglobal.parseFloatglobal.Numberglobal.Stringglobal.Booleanglobal.Object window//浏览器window.alertwindow.promptwindow.comfirmwindow.console.log 全局函数Number1234567891">
 
 
 
@@ -122,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/04/19/git入门/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/06/07/原型与原型链/"/>
 
 
 
 
 
-  <title>git入门 | myBlog</title>
+  <title>原型与原型链 | myBlog</title>
   
 
 
@@ -235,7 +232,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/19/git入门/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/07/原型与原型链/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="jessieshao">
@@ -252,7 +249,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">git入门</h1>
+          <h1 class="post-title" itemprop="name headline">原型与原型链</h1>
         
 
         <div class="post-meta">
@@ -264,8 +261,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-19T15:01:03+08:00">
-                2018-04-19
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-06-07T10:51:27+08:00">
+                2018-06-07
               </time>
             
 
@@ -302,16 +299,13 @@
       
 
       
-        <h3 id="git-init"><a href="#git-init" class="headerlink" title="git init"></a>git init</h3><ul>
-<li>在我们新建一个空仓库后需要初始化这个仓库<br>1.首先新建一个项目目录demo<br>2.命令行进入demo下<br>3.<code>git init</code>在demo中创建一个.git目录，她就是一个仓库 </li>
-</ul>
-<p><img src="/2018/04/19/git入门/1.png" alt="">  </p>
-<h3 id="git-add"><a href="#git-add" class="headerlink" title="git add"></a>git add</h3><ul>
-<li>此时在demo下创建一个文件后，只是创建成功，并没有保存<br>1.<code>touch 1.txt</code>创建一个txt文件<br>2.<code>git status -sb</code>查看状态，发现新建文件前为？<br>3.此时用<code>git add 1.txt</code>添加进暂缓区<br>4.再次<code>git status -sb</code>发现已存入  <img src="/2018/04/19/git入门/2.png" alt="">  </li>
-</ul>
-<h3 id="git-commit-v"><a href="#git-commit-v" class="headerlink" title="git commit -v"></a>git commit -v</h3><ul>
-<li>使用<code>git commit -m</code>“信息” 将你 add 过的内容「正式提交」到本地仓库，并添加一些注释信息，方便日后查阅<br>1.<code>git commit -v</code> 提交时显示所有diff信息<br>2.完成后才是正式提交上</li>
-</ul>
+        <h3 id="全局变量"><a href="#全局变量" class="headerlink" title="全局变量"></a>全局变量</h3><h4 id="global"><a href="#global" class="headerlink" title="global"></a>global</h4><p>//ECMAScript 规定<br>global.parseInt<br>global.parseFloat<br>global.Number<br>global.String<br>global.Boolean<br>global.Object</p>
+<h4 id="window"><a href="#window" class="headerlink" title="window"></a>window</h4><p>//浏览器<br>window.alert<br>window.prompt<br>window.comfirm<br>window.console.log</p>
+<h3 id="全局函数"><a href="#全局函数" class="headerlink" title="全局函数"></a>全局函数</h3><h4 id="Number"><a href="#Number" class="headerlink" title="Number"></a>Number</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">var n = new Number(1);</span><br><span class="line">//这样n是一个对象，有自己的属性，但太麻烦</span><br><span class="line">var n =1;</span><br><span class="line">//n是基本类型</span><br><span class="line">如何使用toString()？</span><br><span class="line">n.toString(); </span><br><span class="line">//等价于</span><br><span class="line">var temp = new Number(n);    //声明了一个临时变量temp，并将n作为Number对象赋给它</span><br><span class="line">temp.toString();             //用temp来执行toString，执行完后temp就被删除了</span><br><span class="line"></span><br><span class="line">n.xxx = 2;      //可以的</span><br><span class="line">n.xxx           //undefined，因为xxx是存在temp的，上一句的temp执行完后就被删除，所以xxx也被删除了</span><br></pre></td></tr></table></figure>
+<h4 id="String"><a href="#String" class="headerlink" title="String"></a>String</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">var s = &apos;asd&apos;;      </span><br><span class="line">var s2 = new String(s);</span><br><span class="line">s2[0]    //&apos;a&apos;</span><br><span class="line">因为String()对象有hash的属性</span><br><span class="line"></span><br><span class="line">s[0]     //&apos;a&apos;</span><br><span class="line">s也能调用这个属性，但s实质没有属性，这个原理和上面Number一样</span><br><span class="line"></span><br><span class="line">s.charCodeAt(0)    //97，a的unicode码</span><br><span class="line">s.charCodeAt(0).toString(16)//&apos;61&apos;，a的unicode码的十六进制</span><br><span class="line"></span><br><span class="line">&apos; asd &apos;.trim();      //&apos;asd&apos;，去掉字符串两边的空格</span><br><span class="line"></span><br><span class="line">var s1 = &apos;Hello&apos;;</span><br><span class="line">s.concat(s1);      //asdHello，连接两个字符串</span><br><span class="line"></span><br><span class="line">s1.slice(0,1);      // &apos;H&apos;</span><br><span class="line">s1.slice(1);        //&apos;ello&apos;，返回1和后面的所有内容</span><br><span class="line"></span><br><span class="line">s1.replace(&apos;e&apos;,&apos;o&apos;)    // &apos;Hollo&apos;，替换</span><br><span class="line"></span><br><span class="line">s1.indexOf(&apos;o&apos;)       //4，定位，若没找到会返回-1</span><br><span class="line">if(s1.indexOf(&apos;h&apos;) !== -1) &#123;&#125;</span><br><span class="line"></span><br><span class="line">s1.toLowerCase();      //    全变成小写</span><br><span class="line">s1.toUpperCase();      //    全变成大写</span><br></pre></td></tr></table></figure>
+<h4 id="Boolean"><a href="#Boolean" class="headerlink" title="Boolean"></a>Boolean</h4><p>所有对象都是true<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var b = false;</span><br><span class="line">var b1 = new Boolean(false);</span><br><span class="line">if(b)&#123;console.log(&apos;true&apos;)&#125;;</span><br><span class="line">if(b1)&#123;console.log(&apos;true&apos;)&#125;;      // true</span><br><span class="line">//只会输出b1，因为所有对象都是true！！</span><br></pre></td></tr></table></figure></p>
+<h4 id="Object"><a href="#Object" class="headerlink" title="Object"></a>Object</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var o1 = &#123;&#125;</span><br><span class="line">var o2 = new Object()</span><br><span class="line">o1 和 o2 没区别</span><br><span class="line">o1 === o2  //false，因为比较的是地址，而地址不同</span><br></pre></td></tr></table></figure>
+<h3 id="公用属性-原型"><a href="#公用属性-原型" class="headerlink" title="公用属性(原型)"></a>公用属性(原型)</h3><p>所有对象都有 toString 和 valueOf 属性，那么我们是否有必要给每个对象一个 toString 和 valueOf 呢？<br>明显不需要。<br>JS 的做法是把 toString 和 valueOf 放在一个对象里（暂且叫做公用属性组成的对象）<br>然后让每一个对象的 <strong>proto</strong> 存储这个「公用属性组成的对象」的地址。</p>
 
       
     </div>
@@ -336,8 +330,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/04/17/命令入门/" rel="next" title="命令入门">
-                <i class="fa fa-chevron-left"></i> 命令入门
+              <a href="/2018/06/06/普通类型和对象的区别/" rel="next" title="普通类型和对象的区别">
+                <i class="fa fa-chevron-left"></i> 普通类型和对象的区别
               </a>
             
           </div>
@@ -345,10 +339,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/04/19/脚本入门/" rel="prev" title="脚本入门">
-                脚本入门 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -462,7 +452,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#git-init"><span class="nav-number">1.</span> <span class="nav-text">git init</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git-add"><span class="nav-number">2.</span> <span class="nav-text">git add</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git-commit-v"><span class="nav-number">3.</span> <span class="nav-text">git commit -v</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#全局变量"><span class="nav-number">1.</span> <span class="nav-text">全局变量</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#global"><span class="nav-number">1.1.</span> <span class="nav-text">global</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#window"><span class="nav-number">1.2.</span> <span class="nav-text">window</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#全局函数"><span class="nav-number">2.</span> <span class="nav-text">全局函数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Number"><span class="nav-number">2.1.</span> <span class="nav-text">Number</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#String"><span class="nav-number">2.2.</span> <span class="nav-text">String</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Boolean"><span class="nav-number">2.3.</span> <span class="nav-text">Boolean</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Object"><span class="nav-number">2.4.</span> <span class="nav-text">Object</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#公用属性-原型"><span class="nav-number">3.</span> <span class="nav-text">公用属性(原型)</span></a></li></ol></div>
             
 
           </div>
