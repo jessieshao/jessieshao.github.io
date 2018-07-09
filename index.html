@@ -229,6 +229,138 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/08/知识中期总结/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="jessieshao">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="myBlog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/07/08/知识中期总结/" itemprop="url">知识中期总结</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-08T15:57:19+08:00">
+                2018-07-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="写一个html"><a href="#写一个html" class="headerlink" title="写一个html"></a>写一个html</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">  &lt;head&gt;</span><br><span class="line">    &lt;meta charset=&quot;utf-8&quot;&gt;</span><br><span class="line">    &lt;title&gt;我的页面&lt;/title&gt;</span><br><span class="line">    &lt;link rel=&quot;stylesheet&quot; href=&quot;/style.css&quot;&gt;</span><br><span class="line">    //仅在打印时有效//</span><br><span class="line">    &lt;link rel=&quot;stylesheet&quot; href=&quot;/print.css&quot; media=&quot;print&quot;&gt;</span><br><span class="line">    //屏幕宽度小于500才有效//</span><br><span class="line">    &lt;link rel=&quot;stylesheet&quot; href=&quot;/mobile.css&quot; media=&quot;screen and (mac-width=500px)&quot;&gt;</span><br><span class="line">  &lt;/head&gt;</span><br><span class="line">  &lt;body&gt;</span><br><span class="line">    //用svg画一个半径为50px的圆//</span><br><span class="line">    &lt;svg&gt;</span><br><span class="line">      &lt;circle cx=&quot;60&quot; cy=&quot;60&quot; r=&quot;50&quot; fill=&quot;none&quot; stroke=&quot;red&quot;/&gt;</span><br><span class="line">    &lt;/svg&gt;</span><br><span class="line"></span><br><span class="line">    &lt;script src=&quot;/main.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">    //使用gbk编码//</span><br><span class="line">    &lt;script src=&quot;/jbk.js&quot; charset=&quot;gb2312&quot;&gt;&lt;/script&gt;</span><br><span class="line">  &lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="移动端适配"><a href="#移动端适配" class="headerlink" title="移动端适配"></a>移动端适配</h3><p>1.meta viewport<br><code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0, maximum-scale=1&quot;&gt;</code><br>meta=viewport时适配移动端<br>width，height，<br>initial-scale：控制页面第一次加载时的缩放比例，取值1.0则页面按实际尺寸显示，无任何缩放<br>maximum-scale：允许用户缩放的最大比例，1.0将禁止用户放大到实际尺寸之上<br>minimum-scale：允许用户缩放的最小比例<br>user-scalable：用户是否可以手动缩放</p>
+<p>2.媒体查询<br>@media有四种媒体类型：<br>all （适用于所有设备）<br>screen （用于屏幕）<br>print （用于打印设备）<br>speech （用于发声设备）<br>默认情况下使用 all 类型<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">    //窗口小于500px时变为红色//</span><br><span class="line">    @media (max-width: 500px) &#123;</span><br><span class="line">        body &#123;</span><br><span class="line">            color: red;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure></p>
+<p>3.动态 rem<br>rem是根节点(html)的font-size（默认font-size是16px）大小。<br>rem可以根据屏幕像素大小按比例缩放<br>在js中直接添加：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1 rem == html font-size == viewport width</span><br><span class="line">&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0&quot;&gt;</span><br><span class="line"> &lt;script&gt;</span><br><span class="line">     var pageWidth = window.innerWidth</span><br><span class="line">     document.write(&apos;&lt;style&gt;html&#123;font-size:&apos;+pageWidth+&apos;px;&#125;&lt;/style&gt;&apos;)</span><br><span class="line"> &lt;/script&gt;</span><br></pre></td></tr></table></figure></p>
+<p>pagewidth/n 表示n rem == 1pagewidth<br>用SCSS使用PX2REM：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">@function px( $px )&#123;</span><br><span class="line">  @return $px/$designWidth*10 + rem;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">$designWidth : 640; // 640 是设计稿的宽度，你要根据设计稿的宽度填写。如果设计师的设计稿宽度不统一，就杀死设计师，换个新的。</span><br><span class="line"></span><br><span class="line">.child&#123;</span><br><span class="line">  width: px(320);</span><br><span class="line">  height: px(160);</span><br><span class="line">  margin: px(40) px(40);</span><br><span class="line">  border: 1px solid red;</span><br><span class="line">  float: left;</span><br><span class="line">  font-size: 1.2em;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="用css3做圆角矩形和阴影"><a href="#用css3做圆角矩形和阴影" class="headerlink" title="用css3做圆角矩形和阴影"></a>用css3做圆角矩形和阴影</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.a&#123;</span><br><span class="line">  background-color: black;</span><br><span class="line">  width: 100px;</span><br><span class="line">  height: 100px;</span><br><span class="line">  border-radius: 10px;</span><br><span class="line">  box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.2);</span><br><span class="line">  //值分别为x,y轴偏移量，阴影模糊面积，阴影面积//</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="什么是闭包，闭包的用途"><a href="#什么是闭包，闭包的用途" class="headerlink" title="什么是闭包，闭包的用途"></a>什么是闭包，闭包的用途</h3><p>闭包：<br>「函数」和「函数内部能访问到的变量」（也叫环境）的总和，就是一个闭包。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">function f1() &#123;</span><br><span class="line">  var n = 1;</span><br><span class="line">  function f2() &#123;</span><br><span class="line">    console.log(n);</span><br><span class="line">  &#125;</span><br><span class="line">  return f2;</span><br><span class="line">&#125; </span><br><span class="line">//函数 f2 和变量 n 的总和就叫做闭包</span><br></pre></td></tr></table></figure></p>
+<p>闭包的作用：<br>1.可以读取函数内部变量的函数<br>2.让某些变量一直存在于内存中，不会在调用结束后，被垃圾回收机制回收</p>
+<h3 id="call、apply、bind-的用法分别是什么？"><a href="#call、apply、bind-的用法分别是什么？" class="headerlink" title="call、apply、bind 的用法分别是什么？"></a>call、apply、bind 的用法分别是什么？</h3><p>call()、apply()、bind() 都是用来重定义 this 这个对象的<br>apply 接受的第二个参数是数组<br>bind 返回的是一个新的函数，必须调用它才会被执行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">var name = &apos;a&apos;, age = &apos;17&apos;;</span><br><span class="line">var obj=&#123;</span><br><span class="line">    objname: &apos;b&apos;,</span><br><span class="line">    objage: this.age,</span><br><span class="line">    fun: function(fn,fa)&#123;</span><br><span class="line">        console.log(this.name + this.age + fn + fa);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">var db=&#123;</span><br><span class="line">    name: &apos;c&apos;,</span><br><span class="line">    age: &apos;18&apos;,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">obj.objage //17</span><br><span class="line">obj.fun.call(db,&apos;成都&apos;,&apos;上海&apos;)// c18成都上海</span><br><span class="line">obj.myFun.apply(db,[&apos;成都&apos;,&apos;上海&apos;]);// c18成都上海</span><br><span class="line">obj.myFun.bind(db,&apos;成都&apos;,&apos;上海&apos;)(); // c18成都上海</span><br><span class="line">()调用函数</span><br></pre></td></tr></table></figure></p>
+<h3 id="HTTP-状态码及意义。"><a href="#HTTP-状态码及意义。" class="headerlink" title="HTTP 状态码及意义。"></a>HTTP 状态码及意义。</h3><p>状态码 202 表示：服务器已接受请求，但尚未处理。<br>状态码 204 表示：请求处理成功，但没有资源可返回。<br>状态码 206 表示：服务器已经成功处理了部分 GET 请求。<br>状态码 301 表示：请求的资源已被永久的分配了新的 URI。<br>状态码 302 表示：请求的资源临时的分配了新的 URI。<br>状态码 400 表示：请求报文中存在语法错误。<br>状态码 401 表示：发送的请求需要有通过 HTTP 认证的认证信息。<br>状态码 403 表示：对请求资源的访问被服务器拒绝了。<br>状态码 404 表示：服务器上无法找到请求的资源。<br>状态码 500 表示：服务器端在执行请求时发生了错误。<br>状态吗 503 表示：服务器暂时处于超负债或正在进行停机维护，现在无法处理请求。</p>
+<h3 id="HTTP-post-请求的内容"><a href="#HTTP-post-请求的内容" class="headerlink" title="HTTP post 请求的内容"></a>HTTP post 请求的内容</h3><p>1 POST /path HTTP/1.1<br>2 Host: <a href="http://www.baidu.com" target="_blank" rel="noopener">www.baidu.com</a><br>2 User-Agent: curl/7.54.0<br>2 Accept: <em>/</em><br>2 Content-Length: 24<br>2 Content-Type: application/x-www-form-urlencoded<br>3<br>4 username=ff&amp;password=123</p>
+<h3 id="至少三种排序的思路"><a href="#至少三种排序的思路" class="headerlink" title="至少三种排序的思路"></a>至少三种排序的思路</h3><p>这三种排序的时间复杂度分别为<br>1.O(n*n)<br>冒泡排序：<br>比较相邻的元素。如果第一个比第二个大，就交换他们两个。<br>对每一对相邻元素作同样的工作，从开始第一对到结尾的最后一对。在这一点，最后的元素应该会是最大的数。<br>2.O(n log2 n)<br>快速排序：<br>先从数列中取出一个数作为基准数，分区过程，将比这个数大的数全放到它的右边，小于或等于它的数全放到它的左边，再对左右区间重复第二步，直到各区间只有一个数<br>3.O(n + max)<br>计数排序：<br>对于给定的输入序列中的每一个元素x，确定该序列中值小于x的元素的个数 。一旦有了这个信息，就可以将x直接存放到最终的输出序列的正确位置上。它创建一个长度为这个数据范围的数组C，C中每个元素记录要排序数组中对应记录的出现个数。 </p>
+<h3 id="一个人页面从输入URL到页面加载成功"><a href="#一个人页面从输入URL到页面加载成功" class="headerlink" title="一个人页面从输入URL到页面加载成功"></a>一个人页面从输入URL到页面加载成功</h3><p>1）DNS解析+路由<br>如果地址不是一个IP地址，通过DNS（域名系统）将该地址解析成IP地址。IP地址对应着网络上一台计算机，DNS服务器本身也有IP，网络设置包含DNS服务器的IP。<br>2）端口号<br>如果地址不包含端口号，根据协议的默认端口号确定一个。<br>3）TCP三次握手<br>浏览器与远程 Web 服务器通过 TCP 三次握手协商来建立一个 TCP/IP 连接。<br>4）发送HTTP请求<br>根据http协议要求，组织一个请求的数据包，里面包含大量请求信息，包括请求的资源路径、你的身份<br>5）服务器处理请求并返回HTTP报文<br>服务器响应请求，将数据返回给浏览器。数据可能是根据HTML协议组织的网页，里面包含页面的布局、文字。数据也可能是图片、脚本程序等。<br>6）网页渲染<br>7）关闭或者继续连接<br>通过四次挥手关闭连接。一端断开连接需要两次挥手（请求和回应），两端断开连接就需要四次挥手。</p>
+<h3 id="去重"><a href="#去重" class="headerlink" title="去重"></a>去重</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">ES5:</span><br><span class="line">function unique(arr)&#123;</span><br><span class="line"> var res = [];</span><br><span class="line"> var obj = &#123;&#125;;</span><br><span class="line"> for(var i=0; i&lt;arr.length; i++)&#123;</span><br><span class="line">  if( !obj[arr[i]] )&#123;</span><br><span class="line">   obj[arr[i]] = 1;</span><br><span class="line">   res.push(arr[i]);</span><br><span class="line">  &#125;</span><br><span class="line"> &#125; </span><br><span class="line"> return res;</span><br><span class="line">&#125;</span><br><span class="line">unique([1,5,2,3,4,2,3,1,3,4])</span><br><span class="line"></span><br><span class="line">ES6:</span><br><span class="line">function unique(array)&#123;</span><br><span class="line">  return Array.from(new Set(array));</span><br><span class="line">&#125;</span><br><span class="line">unique([1,5,2,3,4,2,3,1,3,4])</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/25/jQuery入门/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1431,146 +1563,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/07/CSS基础/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="jessieshao">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="myBlog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/05/07/CSS基础/" itemprop="url">CSS基础</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-07T21:03:07+08:00">
-                2018-05-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="CSS历史"><a href="#CSS历史" class="headerlink" title="CSS历史"></a>CSS历史</h3><p>1.两个人合作发明了 CSS<br>1994年哈肯·维姆·莱提出了CSS的最初建议。伯特·波斯（Bert Bos）当时正在设计一个叫做“Argo”的浏览器，他们决定一起合作设计CSS。<br>2.W3C 开始接管 CSS<br>1997年初，W3C内组织了专门管CSS的工作组，其负责人是克里斯·里雷。<br>CSS 2.1<br>3.1998年5月W3C发表了CSS2<br>CSS2.1修改了CSS2中的一些错误，删除了其中基本不被支持的内容和增加了一些已有的浏览器的扩展内容。<br>CSS 3<br>4.从 2011 年开始 CSS 被分为多个模块单独升级，统称为 CSS 3。这些模块有： </p>
-<ul>
-<li>CSS 选择器 level 3</li>
-<li>CSS 媒体查询 level 3</li>
-<li>CSS Color level 3 </li>
-</ul>
-<h3 id="拉横标题（float-clearfix）"><a href="#拉横标题（float-clearfix）" class="headerlink" title="拉横标题（float+clearfix）"></a>拉横标题（float+clearfix）</h3><p>给所有子元素加上<code>float</code>,给他的爸爸加上<code>clearfix</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">##在css中加入一个class类</span><br><span class="line">.clearfix::after&#123;</span><br><span class="line">  content: &quot;&quot;;</span><br><span class="line">  display: block;</span><br><span class="line">  clear: both;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h3 id="高度和文档流"><a href="#高度和文档流" class="headerlink" title="高度和文档流"></a>高度和文档流</h3><ul>
-<li>div（块级元素）：高度是由内部文档流元素高度的总和决定的。</li>
-<li>文档流：文档内元素的流动方向，内联元素是从左往右，块级元素是从上往下</li>
-<li>span（内联元素）：高度是由其中文字高度决定的，内联元素设置width和height是无效的，上下的margin和padding也无效，要将它们设为display:inline-block才有效。 </li>
-<li>最好不要用height和width，会限制文档流的内容，会出bug  </li>
-</ul>
-<h3 id="position"><a href="#position" class="headerlink" title="position"></a>position</h3><h4 id="position：fixed"><a href="#position：fixed" class="headerlink" title="position：fixed"></a>position：fixed</h4><ul>
-<li>可脱离文档流，相对浏览器窗口定位</li>
-<li>有bug后加<code>width：100%</code>子div会比父div大，因为子还要加上padding</li>
-<li>所以要多套一个div </li>
-</ul>
-<h3 id="CSS三角形"><a href="#CSS三角形" class="headerlink" title="CSS三角形"></a>CSS三角形</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">.triangle&#123;</span><br><span class="line">  ##border为透明</span><br><span class="line">  border: 30px solid transparent;</span><br><span class="line">  ##实心</span><br><span class="line">  height: 0px;</span><br><span class="line">  width: 0px;</span><br><span class="line">  border-top-width: 0;</span><br><span class="line">  border-left-color: red; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="小知识点"><a href="#小知识点" class="headerlink" title="小知识点"></a>小知识点</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">##背景图按比例缩放</span><br><span class="line">background-size: cover;</span><br><span class="line">##div按比例缩放，不会出滚动条</span><br><span class="line">max-width: xxpx;</span><br><span class="line">##div水平居中</span><br><span class="line">margin-top： auto；</span><br><span class="line">margin-left： auto；</span><br></pre></td></tr></table></figure>
-<p>未完待续</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1621,7 +1613,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-count">20</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
