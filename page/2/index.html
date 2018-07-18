@@ -229,6 +229,139 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/10/制作resume/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="jessieshao">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="myBlog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/05/10/制作resume/" itemprop="url">制作resume</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-10T13:36:19+08:00">
+                2018-05-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="内联元素的高度"><a href="#内联元素的高度" class="headerlink" title="内联元素的高度"></a>内联元素的高度</h3><blockquote>
+<p>文字的居中不是让文字的中线居中对齐，而是让基线对齐。<br>每种字体的浏览器默认建议行高不一样。具体情况是由设计师给的字体font-size大小然后在不同的字体情况下有不同的建议行高。<br>多个span在一起的时候，这一行的高度则由最高的span决定。<br>内联元素的高度基本是不可测的，在font-size比较小的时候可以用line-height来控制内联元素所占的高度，如果想要一个特定的高度，可以再在基础上添加padding来增加。</p>
+</blockquote>
+<h3 id="脱离文档流"><a href="#脱离文档流" class="headerlink" title="脱离文档流"></a>脱离文档流</h3><p>一旦脱离文档流，那么父元素的高度则不受该文档控制，父元素会自动忽略他。</p>
+<p>position fixed相对于屏幕<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.topNavBar&#123;</span><br><span class="line">    position: fixed;</span><br><span class="line">    top: 0;</span><br><span class="line">    left: 0;</span><br><span class="line">&#125;</span><br><span class="line">/**相对于屏幕左上角固定**/</span><br></pre></td></tr></table></figure></p>
+<p>如果是fix定位，元素的宽度不会拓展，会往内缩，这时候一般设置width:100%但是给当前div设置100%因为它本身有一个padding宽度，再加上width:100%会超过其父元素，可以通过给要设置的div里面再添加一个div然后给这个新增的div增加padding。</p>
+<h3 id="绝对定位"><a href="#绝对定位" class="headerlink" title="绝对定位"></a>绝对定位</h3><p>在子元素写position:absolute;在父元素写position:relative;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">div&#123;</span><br><span class="line">    position: absolute;</span><br><span class="line">    left: 4px;</span><br><span class="line">    top: 100%; /**离父元素100%的距离，从左往右4px的距离。**/</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="display-inline-block"><a href="#display-inline-block" class="headerlink" title="display:inline block;"></a>display:inline block;</h3><p>外边距margin不会合并<br>加padding<br>span等内联元素不接受宽高，设置也没用，必须设置display:inline-block;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">.userCard .welcome&#123;</span><br><span class="line">  background: #E6686A;</span><br><span class="line">  color: white;</span><br><span class="line">  display: inline-block;</span><br><span class="line">  width: 70px;</span><br><span class="line">  height: 29px;</span><br><span class="line">  line-height: 29px;</span><br><span class="line">  text-align: center;</span><br><span class="line">&#125;</span><br><span class="line">/**最好不要用宽高，在line-height不高的情况下，设置line-height与height高度相等会居中，但是实际line-height会与设定的值不一样，而且会产生bug**/</span><br><span class="line">上面的代码块的效果可以通过下面方法完成，从内像外做,先测原效果宽高为70 30 现有宽高是40 20，宽度现在差30左右给15pxpaading，高度差10上下给5pxpadding。</span><br><span class="line">.userCard .welcome&#123;</span><br><span class="line">    background-color: #E6686A;</span><br><span class="line">    color: white;</span><br><span class="line">    display: inline-block;</span><br><span class="line">    padding: 5px 15px;</span><br><span class="line">      line-height: 20px;</span><br><span class="line">&#125;</span><br><span class="line">/**这种效果比上面还具有一种优势，无论span里面的内容(welcom)增加或减少，居中都不会变。**/</span><br><span class="line">/**需要注意的事最后还要添加line-height:20px;尽管现在在机器上是20px了，但是有些机器可能会变动，添加line-height之后可以明确表明20px+2*5px=30px**/</span><br></pre></td></tr></table></figure></p>
+<h3 id="半透层背景"><a href="#半透层背景" class="headerlink" title="半透层背景"></a>半透层背景</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">background-color: rgba(0,255,0,0.8);</span><br><span class="line">/不要颜色（黑色），半透层背景/</span><br></pre></td></tr></table></figure>
+<h3 id="背景图片"><a href="#背景图片" class="headerlink" title="背景图片"></a>背景图片</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">##居中</span><br><span class="line">background-position: center center;</span><br><span class="line">##按比例缩放</span><br><span class="line">background-size: cover;</span><br></pre></td></tr></table></figure>
+<h3 id="max-width"><a href="#max-width" class="headerlink" title="max-width"></a>max-width</h3><p>不要设定固定的宽度，可以设置最大宽度,如果屏幕比最大宽度小可以自适应<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">:max-width:940px;</span><br><span class="line">div设置水平居中</span><br><span class="line">margin-left:auto;</span><br><span class="line">margin-right:auto;</span><br></pre></td></tr></table></figure></p>
+<h3 id="hr"><a href="#hr" class="headerlink" title="hr"></a>hr</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">hr&#123;</span><br><span class="line">    height: 0;</span><br><span class="line">    border:none;</span><br><span class="line">    border-top: 1px solid #DEDEDE;</span><br><span class="line">&#125;</span><br><span class="line">.userCard .text hr&#123;</span><br><span class="line">    margin: 20px 0px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="dl浮动"><a href="#dl浮动" class="headerlink" title="dl浮动"></a>dl浮动</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">.userCard dl dt,</span><br><span class="line">.userCard dl dd&#123;</span><br><span class="line">    float: left;        </span><br><span class="line">&#125;</span><br><span class="line">.userCard dl dt&#123;</span><br><span class="line">    width: 30%;</span><br><span class="line">&#125;</span><br><span class="line">.userCard dl dd&#123;</span><br><span class="line">    width: 70%;         </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="svg"><a href="#svg" class="headerlink" title="svg"></a>svg</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">svg&#123;</span><br><span class="line">    width: 30px;</span><br><span class="line">    height: 30px;</span><br><span class="line">    fill: white;</span><br><span class="line">    vertical-align: top;  </span><br><span class="line">    /**缩小下边距**/</span><br><span class="line">&#125;</span><br><span class="line">a标签搭配svg</span><br><span class="line">a&#123;</span><br><span class="line">    display: inline-block;</span><br><span class="line">    border-radius: 50%;      </span><br><span class="line">    width: 40px;</span><br><span class="line">    padding: 5px 0;          </span><br><span class="line">    line-height: 30px;</span><br><span class="line">    margin: 16px 16px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/07/CSS基础/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1431,130 +1564,11 @@ sh ~/local/demo xxx
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/17/开博大吉/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="jessieshao">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="myBlog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/04/17/开博大吉/" itemprop="url">我的博客</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-17T18:00:03+08:00">
-                2018-04-17
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1600,7 +1614,7 @@ sh ~/local/demo xxx
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">20</span>
+                  <span class="site-state-item-count">21</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
