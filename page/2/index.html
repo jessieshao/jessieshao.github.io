@@ -229,6 +229,158 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/14/算法初级/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="jessieshao">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="myBlog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/05/14/算法初级/" itemprop="url">算法初级</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-14T19:59:22+08:00">
+                2018-05-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h3><p>以下是高德纳在他的著作《计算机程序设计艺术》里对算法的特征归纳：</p>
+<ul>
+<li>输入：一个算法必须有零个或以上输入量。</li>
+<li>输出：一个算法应有一个或以上输出量，输出量是算法计算的结果。</li>
+<li>明确性：算法的描述必须无歧义，以保证算法的实际执行结果是精确地匹配要求或期望，通常要求实际运行结果是确定的。</li>
+<li>有限性：依据图灵的定义，一个算法是能够被任何图灵完备系统模拟的一串运算，而图灵机只有有限个状态、有限个输入符号和有限个转移函数（指令）。而一些定义更规定算法必须在有限个步骤内完成任务。</li>
+<li>有效性：又称可行性。能够实现，算法中描述的操作都是可以通过已经实现的基本运算执行有限次来实现。</li>
+</ul>
+<h3 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h3><p>Bubble Sort（体育委员摸头杀）</p>
+<blockquote>
+<p>冒泡排序算法的流程如下：<br> 比较相邻的元素。如果第一个比第二个大，就交换他们两个。<br> 对每一对相邻元素作同样的工作，从开始第一对到结尾的最后一对。在这一点，最后的元素应该会是最大的数。<br> 针对所有的元素重复以上的步骤，除了最后一个。<br> 持续每次对越来越少的元素重复上面的步骤，直到没有任何一对数字需要比较。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">##时间复杂度：O(n^2)</span><br><span class="line">function bubbleSort(array) &#123;</span><br><span class="line">   var length = array.length,</span><br><span class="line">       i,</span><br><span class="line">       j,</span><br><span class="line">       temp;</span><br><span class="line">   for (i = length - 1; 0 &lt; i; i--) &#123;</span><br><span class="line">       for (j = 0; j &lt; i; j++) &#123;</span><br><span class="line">           if (array[j] &gt; array[j + 1]) &#123;</span><br><span class="line">               temp = array[j];</span><br><span class="line">               array[j] = array[j + 1];</span><br><span class="line">               array[j + 1] = temp;</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br><span class="line">   return array;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h3 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h3><p>Selection Sort（体育老师点人法）</p>
+<blockquote>
+<p>首先在未排序序列中找到最小（大）元素，存放到排序序列的起始位置，然后，再从剩余未排序元素中继续寻找最小（大）元素，然后放到已排序序列的末尾。以此类推，直到所有元素均排序完毕。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">function selectionSort(array) &#123;</span><br><span class="line">  var length = array.length,</span><br><span class="line">      i,</span><br><span class="line">      j,</span><br><span class="line">      minIndex,</span><br><span class="line">      minValue,</span><br><span class="line">      temp;</span><br><span class="line">  for (i = 0; i &lt; length - 1; i++) &#123;</span><br><span class="line">    minIndex = i;</span><br><span class="line">    minValue = array[minIndex];</span><br><span class="line">    for (j = i + 1; j &lt; length; j++) &#123;</span><br><span class="line">      if (array[j] &lt; minValue) &#123;</span><br><span class="line">        minIndex = j;</span><br><span class="line">        minValue = array[minIndex];</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    // 交换位置</span><br><span class="line">    temp = array[i];</span><br><span class="line">    array[i] = minValue;</span><br><span class="line">    array[minIndex] = temp;</span><br><span class="line">  &#125;</span><br><span class="line">  return array</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h3 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h3><p>Insertion Sort</p>
+<blockquote>
+<p>从数组的第二个开始，和第一个比较并排顺序，接着拿第三个和第二个比，若比第二个大则直接不动，若比第二个小则和第一个比，若比二小比一大则插在它们中间，若比第一个小则放在第一个，接着再拿第四个分别和三、二、一比…….直到最后。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">function insertionSort(array) &#123;</span><br><span class="line">  function swap(array, i, j) &#123;</span><br><span class="line">    var temp = array[i];</span><br><span class="line">    array[i] = array[j];</span><br><span class="line">    array[j] = temp;</span><br><span class="line">  &#125;</span><br><span class="line">  var length = array.length,</span><br><span class="line">      i,</span><br><span class="line">      j;</span><br><span class="line">  for (i = 1; i &lt; length; i++) &#123;</span><br><span class="line">    for (j = i; j &gt; 0; j--) &#123;</span><br><span class="line">      if (array[j - 1] &gt; array[j]) &#123;</span><br><span class="line">        swap(array, j - 1, j);</span><br><span class="line">      &#125; else &#123;</span><br><span class="line">        break;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  return array;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h3 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h3><blockquote>
+<p>优点：<br>效率高,时间复杂度：O(n*log2n)<br>缺点：<br>有时候比计数排序慢</p>
+</blockquote>
+<h3 id="计数排序（hash）"><a href="#计数排序（hash）" class="headerlink" title="计数排序（hash）"></a>计数排序（hash）</h3><blockquote>
+<p>优点：<br>效率高，时间复杂度：O(n+max)<br>缺点：<br>1.需要一个hash来作为工具<br>2.无法对小数和负数进行排序，只能排正整数<br>3.可能需要很多桶，不像桶排序可控制桶数量<br>用途：<br>数字相差不大的时候可以用计数排序，如年龄排序</p>
+</blockquote>
+<h3 id="桶排序（hash）"><a href="#桶排序（hash）" class="headerlink" title="桶排序（hash）"></a>桶排序（hash）</h3><blockquote>
+<p>优点：<br>和计数排序不同的是一个桶里可放多个数字，效率高，计数排序的改良版，时间复杂度：O(N+C)<br>缺点：<br>需要hash工具，和计数排序不同的是每个桶里都是无序的，还要再排一次序<br>用途：<br>高考总分排序，每100分放在一个桶里，数字很分散的时候不好用，可用基数排序（比如从几十到几千）</p>
+</blockquote>
+<h3 id="基数排序Radix-Sort（Hash）"><a href="#基数排序Radix-Sort（Hash）" class="headerlink" title="基数排序Radix Sort（Hash）"></a>基数排序Radix Sort（Hash）</h3><blockquote>
+<p>优点：<br>效率高<br>桶数量是确定的，时间复杂度：O(nlog(r)m)<br>缺点：<br>需要一个hash当工具，要多次排序</p>
+</blockquote>
+<h3 id="堆排序"><a href="#堆排序" class="headerlink" title="堆排序"></a>堆排序</h3><h3 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h3><h3 id="复习网址"><a href="#复习网址" class="headerlink" title="复习网址"></a>复习网址</h3><p><a href="http://bubkoo.com/tags/algorithm/" target="_blank" rel="noopener">http://bubkoo.com/tags/algorithm/</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/10/CSS布局/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1429,135 +1581,6 @@ sh ~/local/demo xxx
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/19/git入门/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="jessieshao">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="myBlog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/04/19/git入门/" itemprop="url">git入门</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-19T15:01:03+08:00">
-                2018-04-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="git-init"><a href="#git-init" class="headerlink" title="git init"></a>git init</h3><ul>
-<li>在我们新建一个空仓库后需要初始化这个仓库<br>1.首先新建一个项目目录demo<br>2.命令行进入demo下<br>3.<code>git init</code>在demo中创建一个.git目录，她就是一个仓库 </li>
-</ul>
-<p><img src="/2018/04/19/git入门/1.png" alt="">  </p>
-<h3 id="git-add"><a href="#git-add" class="headerlink" title="git add"></a>git add</h3><ul>
-<li>此时在demo下创建一个文件后，只是创建成功，并没有保存<br>1.<code>touch 1.txt</code>创建一个txt文件<br>2.<code>git status -sb</code>查看状态，发现新建文件前为？<br>3.此时用<code>git add 1.txt</code>添加进暂缓区<br>4.再次<code>git status -sb</code>发现已存入  <img src="/2018/04/19/git入门/2.png" alt="">  </li>
-</ul>
-<h3 id="git-commit-v"><a href="#git-commit-v" class="headerlink" title="git commit -v"></a>git commit -v</h3><ul>
-<li>使用<code>git commit -m</code>“信息” 将你 add 过的内容「正式提交」到本地仓库，并添加一些注释信息，方便日后查阅<br>1.<code>git commit -v</code> 提交时显示所有diff信息<br>2.完成后才是正式提交上</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1608,7 +1631,7 @@ sh ~/local/demo xxx
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">22</span>
+                  <span class="site-state-item-count">23</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
